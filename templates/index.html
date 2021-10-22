@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREDICTION</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacfico' rel='stylesheet' type=text/css>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type=text/css>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type=text/css>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type=text/css>
+    <style>
+        input[type="SepalLengthCm"] {
+            text-align: center;
+        }
+
+        input[type="SepalWidthCm"] {
+            text-align: center;
+        }
+
+        input[type="PetalLengthCm"] {
+            text-align: center;
+        }
+
+        input[type="PetalWidthCm"] {
+            text-align: center;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>PREDICTION OF TYPE OF FLOWER</h1>
+
+    <h2>Please enter the data for prediction </h2>
+    <form action="/predict" method="post">
+        <p>SepalLength<br><input type="SepalLengthCm" name="sepallength" placeholder="in Centimeters"
+                required="required"></p><br>
+
+        <p>SepalWidth<br><input type="SepalWidthCm" name="sepalwidth" placeholder="in Centimeters" required="required">
+        </p><br>
+
+        <p>PetalLength<br><input type="PetalLengthCm" name="petallength" placeholder="in Centimeters"
+                required="required"></p><br>
+
+        <p>PetalWidth<br><input type="PetalWidthCm" name="petalwidth" placeholder="in Centimeters" required="required">
+        </p><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <br>
+    <br>
+    {{prediction_text}}
+
+</body>
+
+</html>
